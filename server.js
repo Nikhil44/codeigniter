@@ -1,16 +1,35 @@
 const express = require('express');
-
+const hbs = require('hbs');
 var app = express();
 
 // setup of static dir
+app.set('view engine','hbs');
 app.use(express.static(__dirname+ '/public'));
 
+hbs.registerPartials(__dirname + '/views/partials');
+
+
+hbs.registerHelper('getCurrentYear', () => {
+  return new Date().getFullYear();
+});
+
+hbs.registerHelper('screamIT',(text) => {
+  return text.toUpperCase();
+})
+
+
 app.get('/', (req,res) =>  {
-    res.send({name: "nikhil"});
+  res.render('home.hbs',
+  { pageTitle: 'home Page',
+    welcomeMessage: 'Welcome to my website'
+  });
 });
 
 app.get('/about', (req,res) =>  {
-    res.send({name: "nikhil"});
+    res.render('about.hbs',
+    {
+      pageTitle: 'About Page'
+    });
 });
 
 //bad -send nack json with error ,message
