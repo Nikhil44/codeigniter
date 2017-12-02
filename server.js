@@ -4,7 +4,22 @@ var app = express();
 
 // setup of static dir
 app.set('view engine','hbs');
+app.use((req,res,next) =>
+{
+  var now = new Date().toString();
+  console.log(`${now}: ${req.method} ${req.url}`);
+  next();
+})
+
+
 app.use(express.static(__dirname+ '/public'));
+
+
+app.use((req,res,next) =>
+{
+   res.render('maintenance.hbs',{errorTitle: 'we will be back '})
+})
+
 
 hbs.registerPartials(__dirname + '/views/partials');
 
@@ -36,6 +51,9 @@ app.get('/about', (req,res) =>  {
 app.get('/bad', (req,res) =>  {
     res.send({errorMessage: "unable to handal resquest"});
 });
+
+
+
 
 app.listen(3000,() => {
   console.log("server is up");
