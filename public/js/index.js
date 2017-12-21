@@ -39,7 +39,6 @@ jQuery('#message-form').on('submit', function (e) {
 		from: 'User',
 		text: jQuery('#message').val()
 	}, function () {
-
 	})
 });
 
