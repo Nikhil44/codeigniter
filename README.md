@@ -17,6 +17,10 @@
   13.   <a href="https://www.npmjs.com/package/jsonwebtoken"> Jsonwebtoken</a>
   14.   <a href="https://www.npmjs.com/package/bcryptjs"> Bcrypt JS</a> 
   15.   <a href="https://socket.io/"> Socket IO</a>
+  16.   <a href="https://github.com/inxilpro/node-app-root-path"> App Root Path</a>
+  17.   <a href="https://www.npmjs.com/package/constant"> Constant </a>
+  18.   <a href="https://github.com/expressjs/cookie-parser">Cookie Parser</a>
+  19.   <a href="https://github.com/expressjs/cors"> Cors</a>
 # Useful Node Js Modules(web application framework)
   1.   <a href="https://expressjs.com/"> Express </a>
 # Web template
@@ -31,4 +35,5 @@
   3.   <a href="https://www.npmjs.com/package/supertest"> Super Test  </a>
   4.   <a href="https://mochajs.org/"> Mochajs </a>
   5.   <a href="https://github.com/mjackson/expect"> Expect </a>
+  6.   <a href="https://nodejs.org/api/assert.html"> Assert </a>
  
